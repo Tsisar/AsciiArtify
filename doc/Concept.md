@@ -88,5 +88,12 @@
 Розгорнемо http-echo сервер на `k3d` кластері та налаштуємо Ingress для доступу до нього.
 
 ```bash
-kubectl apply -f 
+kubectl apply -f https://raw.githubusercontent.com/Tsisar/AsciiArtify/refs/heads/master/http-echo/http-echo.yaml
 ```
+
+Провіримо, відповідь сервера:
+```bash
+curl http://echo.tsisar.lan
+```
+Domo:
+![Image](gif/demo.gif)
