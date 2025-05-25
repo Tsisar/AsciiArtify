@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    app: demo
+spec:
+  destination:
+    name: in-cluster
+    namespace: demo
+  source:
+    path: "helm/charts/demo"
+    repoURL: "https://github.com/Tsisar/AsciiArtify.git"
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
