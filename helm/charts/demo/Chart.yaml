@@ -1,0 +1,13 @@
+apiVersion: v2
+name       : proxy
+description: Demo chart for Kubernetes
+type       : application
+version    : 0.1.0 # This is the Helm Chart version
+appVersion : 0.1.0 # This is the version of the application being deployed
+
+keywords:
+  - demo
+
+maintainers:
+  - name : Pavlo Tsisar
+    url  : tsisar.com.ua
