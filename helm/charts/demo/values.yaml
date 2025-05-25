@@ -1,6 +1,6 @@
 image:
   repository: ptsisar/devops-types
-  tag: v0.0.1
+  tag: latest
 
 ingress:
   host: demo.tsisar.com.ua
